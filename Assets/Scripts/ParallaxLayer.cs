@@ -13,6 +13,9 @@ public class ParallaxLayer : MonoBehaviour
 
     public float left = -19f;
     public Vector3 right = new Vector3(19f, 0f, 0f);
+    //gameobject.transform.position.y references the y position of this object
+
+    //if there's a problem with Y alignment, change Vector3 right into another float and only change the position.x
 
     public float rate = 1f;
 
