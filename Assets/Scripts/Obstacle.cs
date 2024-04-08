@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    // TODO: A public float variable to control how fast the obstacle moves across the screen
+    //public float variable to control how fast the obstacle moves across the screen
     public float moveSpeed = 4.0f;
-    // TODO: A public float variable to control how far the object should go before being destroyed offscreen.
+    //public float variable to control how far the object should go before being destroyed offscreen.
     public float travelDistance = -10.75f;
 
     void Start()
@@ -16,13 +16,17 @@ public class Obstacle : MonoBehaviour
 
     void Update()
     {
-        // TODO: Move the obstacle to the left at a constant rate. 
-        // Make sure this calculation is frame rate independent (hint: use Time.deltaTime)
+        //Move the obstacle to the left at a constant rate. 
         transform.position += Vector3.left * Time.deltaTime * moveSpeed;
-        // TODO: If the obstalce is off screen to the left, destroy this GameObject (hint: Destroy(gameObject))
+        //If the obstalce is off screen to the left, destroy this GameObject
         if (transform.position.x <= travelDistance)
         {
             Destroy(gameObject);
-        } 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Health.TryDamageTarget(other.gameObject, 1);
     }
 }
