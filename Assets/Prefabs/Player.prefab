@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  jumpForce: 300
+  jumpForce: 350
   isFalling: 1
 --- !u!50 &4868857013970807790
 Rigidbody2D:

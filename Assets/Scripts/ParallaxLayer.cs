@@ -4,7 +4,26 @@ using UnityEngine;
 
 public class Parallax
 {
-    public static float speed = 2f;
+    public enum Layer
+    {
+        Foreground, Midground, Background
+    }
+    public static float speed = 3f;
+
+    public static float GetSpeed(Layer layer)
+    {
+        switch (layer)
+        {
+            case Layer.Foreground:
+                return speed * 1;
+            case Layer.Midground:
+                return speed * 0.5f;
+            case Layer.Background:
+                return speed * 0.1f;
+            default:
+                return speed * 1;
+        }
+    }
 }
 
 public class ParallaxLayer : MonoBehaviour
@@ -17,18 +36,13 @@ public class ParallaxLayer : MonoBehaviour
 
     //if there's a problem with Y alignment, change Vector3 right into another float and only change the position.x
 
-    public float rate = 1f;
-
-    void Start()
-    {
-        
-    }
+    public Parallax.Layer layer;
 
     void Update()
     {
-        for (int i = 0; i < tiles.Length; i++)
+        for (int i = 0; i < tiles.Length; i++) //used to mess with each tile on the layer (the array tiles that contains all the layer sprites)
         {
-            tiles[i].position += Vector3.left * Time.deltaTime * Parallax.speed * rate;
+            tiles[i].position += Vector3.left * Time.deltaTime * Parallax.GetSpeed(layer);
 
             if (tiles[i].position.x <= left)
             {

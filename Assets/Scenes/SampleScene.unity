@@ -301,12 +301,7 @@ MonoBehaviour:
   - {fileID: 1176206209}
   left: -19
   right: {x: 19, y: 0, z: 0}
-  rate: 2
---- !u!50 &422576210 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4868857013970807790, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
-  m_PrefabInstance: {fileID: 1145880573}
-  m_PrefabAsset: {fileID: 0}
+  layer: 0
 --- !u!1 &458076845
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +580,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 3
+--- !u!95 &639966300
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639966290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &749397963
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +636,7 @@ MonoBehaviour:
   - {fileID: 48427941}
   left: -19
   right: {x: 19, y: 0, z: 0}
-  rate: 1
+  layer: 1
 --- !u!4 &749397965
 Transform:
   m_ObjectHideFlags: 0
@@ -793,7 +810,7 @@ MonoBehaviour:
   - {fileID: 557997042}
   left: -19
   right: {x: 19, y: 0, z: 0}
-  rate: 0.3
+  layer: 2
 --- !u!4 &963693548
 Transform:
   m_ObjectHideFlags: 0
@@ -904,9 +921,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 781313138381575497, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
+      propertyPath: jumpForce
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 781313138381575497, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
       propertyPath: rigidbody
       value: 
-      objectReference: {fileID: 422576210}
+      objectReference: {fileID: 0}
     - target: {fileID: 3679950054003716675, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.869767
@@ -970,6 +991,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5398658902367633229, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 639966295}
+    - targetCorrespondingSourceObject: {fileID: 5398658902367633229, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 639966300}
   m_SourcePrefab: {fileID: 100100000, guid: 871822e92b9ac8b4aa180f7ec705b4c3, type: 3}
 --- !u!1 &1176206208
 GameObject:

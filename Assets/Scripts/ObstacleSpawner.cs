@@ -8,7 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
     public float timeToSpawn;
     void Start()
     {
-        timeToSpawn = Random.Range(1f, 3f);
+        timeToSpawn = Random.Range(1.5f, 3f);
     }
 
     void Update()

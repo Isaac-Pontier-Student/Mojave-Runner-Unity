@@ -5,7 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     //public float variable to control how fast the obstacle moves across the screen
-    public float moveSpeed = 4.0f;
+    public Parallax.Layer layer;
     //public float variable to control how far the object should go before being destroyed offscreen.
     public float travelDistance = -10.75f;
 
@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         //Move the obstacle to the left at a constant rate. 
-        transform.position += Vector3.left * Time.deltaTime * moveSpeed;
+        transform.position += Vector3.left * Parallax.GetSpeed(layer) * Time.deltaTime;
         //If the obstalce is off screen to the left, destroy this GameObject
         if (transform.position.x <= travelDistance)
         {
