@@ -18,7 +18,7 @@ public class ObstacleSpawner : MonoBehaviour
         if(timeToSpawn <= 0)
         {
             SpawnObstacle();
-            timeToSpawn = Random.Range(1f, 3f);
+            timeToSpawn = Random.Range(1.5f, 3f);
         }
     }
 
