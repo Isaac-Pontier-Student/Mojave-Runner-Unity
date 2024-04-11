@@ -51,6 +51,3 @@ TagManager:
   - name: Foreground
     uniqueID: 3298597103
     locked: 0
-  - name: Smoke layer
-    uniqueID: 135986033
-    locked: 0

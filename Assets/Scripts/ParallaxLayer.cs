@@ -8,7 +8,7 @@ public class Parallax
     {
         Foreground, Midground, Background
     }
-    public static float speed = 3f;
+    public static float speed = 6f;
 
     public static float GetSpeed(Layer layer)
     {
