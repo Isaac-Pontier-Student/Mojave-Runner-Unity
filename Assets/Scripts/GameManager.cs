@@ -17,9 +17,15 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        SceneManager.LoadScene(1);
     }
 
     public void Restart()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void StartGame()
     {
         SceneManager.LoadScene(0);
     }
