@@ -21,7 +21,7 @@ public class Obstacle : MonoBehaviour
         //If the obstalce is off screen to the left, destroy this GameObject
         if (transform.position.x <= travelDistance)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

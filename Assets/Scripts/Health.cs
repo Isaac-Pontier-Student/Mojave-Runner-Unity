@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damageAmount) //this will be called when there's damage to our health, and it will remove the given amount of damage
     {
         healthAmount -= damageAmount;
+        GameFeel.AddCameraShake(0.1f);
         if (healthAmount <= 0)
         {;
             GameManager.instance.Restart();
