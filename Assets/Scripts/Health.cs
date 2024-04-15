@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     {
         healthAmount -= damageAmount;
         if (healthAmount <= 0)
-        {
+        {;
             GameManager.instance.Restart();
         }
     }
